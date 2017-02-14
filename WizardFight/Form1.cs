@@ -25,8 +25,7 @@ namespace WizardFight
         {
             Fight MyFight = new Fight();
 
-
-
+            fightBox.Text += System.Environment.NewLine + "Varázslók létrehozva:";
             fightBox.Text += System.Environment.NewLine;
             fightBox.Text += MyFight.Gandalf.ToString();
             fightBox.Text += System.Environment.NewLine;
@@ -46,11 +45,14 @@ namespace WizardFight
             }
             fightBox.Text += System.Environment.NewLine;
             fightBox.Text += "###--------<<<CSATA>>>-------###";
-
+            fightBox.Text += System.Environment.NewLine;
             
 
             nyertes = MyFight.WFight();
-           
+
+            fightBox.Text += "A nyertes: " + nyertes.ToString();
+            fightBox.Text += System.Environment.NewLine;
+
             gwlabel.Text = MyFight.Gandalf.Name;
             ewlabel.Text = MyFight.Devil.Name;
 
